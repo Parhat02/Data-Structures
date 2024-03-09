@@ -15,6 +15,7 @@ public class Task {
         list.add(new int[] {10,0});
         list.add(new int[] {3,5});
         list.add(new int[] {2,5});
+        list.add(new int[] {5,2});
         System.out.println(countPassengers(list)); //Time Complexity is N
 
     }
