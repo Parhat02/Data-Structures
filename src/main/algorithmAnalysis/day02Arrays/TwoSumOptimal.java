@@ -1,4 +1,4 @@
-package algorithmAnalysis.day02Arrays;
+package main.algorithmAnalysis.day02Arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;

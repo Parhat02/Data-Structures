@@ -1,4 +1,4 @@
-package algorithmAnalysis;
+package main.algorithmAnalysis;
 
 public class BigOSingleLoop {
 

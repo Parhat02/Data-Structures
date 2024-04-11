@@ -1,6 +1,5 @@
-package algorithmAnalysis.day1Review;
+package main.algorithmAnalysis.day1Review;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Binary {

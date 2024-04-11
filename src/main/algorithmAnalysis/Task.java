@@ -1,4 +1,4 @@
-package algorithmAnalysis;
+package main.algorithmAnalysis;
 
 import java.util.ArrayList;
 import java.util.Arrays;
