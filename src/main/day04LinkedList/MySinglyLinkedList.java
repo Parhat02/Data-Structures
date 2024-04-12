@@ -22,6 +22,18 @@ public class MySinglyLinkedList {
         }
     }
 
+    void addFirst(int value){
+        // create a new Note from the value
+        Node newNode = new Node(value);
+        if (isEmpty()){
+            head=tail=newNode;
+        }else {
+            newNode.next = head;
+            head = newNode;
+        }
+        size++;
+    }
+
     void  deleteById(int id){
         //check if empty
         if (isEmpty()){

@@ -21,6 +21,10 @@ public class SinglyLinkedLIstApp {
 
         System.out.println("Index of 3: " + myList.indexOf(3));
 
+        myList.addFirst(11);
+        myList.printNode();
+        System.out.println("Index of 3: " + myList.indexOf(3));
+
     }
 
 }
