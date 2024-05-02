@@ -25,6 +25,9 @@ public class SinglyLinkedLIstApp {
         myList.printNode();
         System.out.println("Index of 3: " + myList.indexOf(3));
 
+        System.out.println("Get Kth item from the list: " + myList.getKthItemFromLast(3));
+        myList.removeKthItemFromLast(3);
+        myList.printNode();
     }
 
 }

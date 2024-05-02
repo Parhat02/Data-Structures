@@ -115,4 +115,37 @@ public class MySinglyLinkedList {
         return ptr1.id;
     }
 
+    public void removeKthItemFromLast(int k){
+        //create two pointers
+        Node ptr1 = head;
+        Node ptr2 = head;
+        Node prev = null;
+
+        //move ptr2 k-1 times
+        for (int i = 0; i < k-1; i++) {
+            ptr2 = ptr2.next;
+        }
+        //move both pointers until ptr2 hits the last element
+        while (ptr2.next!=null){
+            prev=ptr1;
+            ptr1=ptr1.next;
+            ptr2=ptr2.next;
+        }
+        
+        if (ptr1==head){
+            head=ptr1.next;
+            ptr1 = null;
+            size--;
+        } else if (ptr1==tail) {
+            tail=prev;
+            prev.next=null;
+            size--;
+        }else {
+            prev.next=ptr1.next;
+            ptr1=null;
+            size--;
+        }
+
+    }
+
 }
