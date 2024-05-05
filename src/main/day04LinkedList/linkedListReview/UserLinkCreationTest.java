@@ -13,5 +13,9 @@ public class UserLinkCreationTest {
         System.out.println();
         list.get(2);
         System.out.println(list.get2(2));
+
+
+        list.deleteByName("Carol");
+        list.printNames();
     }
 }

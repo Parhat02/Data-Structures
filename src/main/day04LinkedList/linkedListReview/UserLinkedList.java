@@ -63,4 +63,39 @@ public class UserLinkedList {
         }
     }
 
+    void deleteByName(String name){
+        if (isEmpty()){
+            System.out.println("List is empty");
+            return;
+        }
+        User prev=head;
+        User current=head;
+        while (current!=null){
+            if (current.name.equals(name)){
+                if (current==head){
+                    if (head==tail){ // if there is one element
+                        tail=null;
+                    }
+                    head=current.next;
+                    current.next=null;
+                } else if (current==tail) {
+                    prev.next=null;
+                    tail=prev;
+                }else {
+                    prev.next=current.next;
+                    current.next=null;
+                }
+            }
+            prev=current;
+            current=current.next;
+        }
+    }
+
+
+
+
+
+
+
+
 }
