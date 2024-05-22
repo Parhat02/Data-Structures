@@ -1,15 +1,15 @@
 package main.day04LinkedList;
 
 public class MySinglyLinkedList {
-    Node head;
-    Node tail;
-    int size;
+    public Node head;
+    public Node tail;
+    public int size;
 
     boolean isEmpty(){
         return head==null;
     }
 
-    void add(int data){
+    public void add(int data){
         //create a new node object from data
         Node node = new Node(data);
 
@@ -22,7 +22,7 @@ public class MySinglyLinkedList {
         }
     }
 
-    void addFirst(int value){
+    public void addFirst(int value){
         // create a new Note from the value
         Node newNode = new Node(value);
         if (isEmpty()){
@@ -34,7 +34,7 @@ public class MySinglyLinkedList {
         size++;
     }
 
-    void  deleteById(int id){
+    public void  deleteById(int id){
         //check if empty
         if (isEmpty()){
             System.out.println("List is empty!!!");
@@ -68,7 +68,7 @@ public class MySinglyLinkedList {
         }
     }
 
-    int indexOf(int id){
+    public int indexOf(int id){
         if (isEmpty()){
             return -1;
         }
@@ -85,7 +85,7 @@ public class MySinglyLinkedList {
         return -1;
     }
 
-    void printNode(){
+    public void printNode(){
         Node current = head;
         while (current != null){
             if (current.next==null){
