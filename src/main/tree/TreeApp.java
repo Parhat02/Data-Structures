@@ -8,5 +8,17 @@ public class TreeApp {
             tree.insert(number);
         }
         VisualizeTree.printTree(tree.root, null, false);
+
+        System.out.println("Pre-Order Traversal of the Tree");
+        tree.preOrderTraversal(tree.root);
+
+        System.out.println();
+        System.out.println("In-Order Traversal of the Tree");
+        tree.inOrderTraversal(tree.root);
+
+        System.out.println();
+        System.out.println("Post-Order Traversal of the Tree");
+        tree.postOrderTraversal(tree.root);
+
     }
 }

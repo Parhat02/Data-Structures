@@ -32,6 +32,30 @@ public class MyTree {
                 current = current.rightChild;
             }
         }
-
     }
+
+    // Root - left - right
+    void preOrderTraversal(TNode root){
+        if (root==null) return; //termination
+        System.out.print(root.value+", "); // visit root
+        preOrderTraversal(root.leftChild); // visit left subtree
+        preOrderTraversal(root.rightChild); // visit right subtree
+    }
+
+    // Left - Root - Right
+    void inOrderTraversal(TNode root){
+        if (root==null) return;
+        inOrderTraversal(root.leftChild);
+        System.out.print(root.value+", ");
+        inOrderTraversal(root.rightChild);
+    }
+
+    // Left - Right - Root
+    void postOrderTraversal(TNode root){
+        if (root==null) return;
+        postOrderTraversal(root.leftChild);
+        postOrderTraversal(root.rightChild);
+        System.out.print(root.value+", ");
+    }
+
 }
