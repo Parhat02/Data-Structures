@@ -23,5 +23,8 @@ public class TreeApp {
         System.out.println();
         System.out.println("Level-Order Traversal of the Tree");
         tree.levelOrderTraversal(tree.root);
+
+        System.out.println();
+        System.out.println(tree.searchBST(tree.root, 9));
     }
 }

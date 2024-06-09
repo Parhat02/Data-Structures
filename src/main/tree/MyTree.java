@@ -73,5 +73,21 @@ public class MyTree {
         }
     }
 
+    public TNode searchBST(TNode root, int val){
+        if (root==null){
+            return null;
+        }
+        TNode current = root;
+        while (current!=null){
+            if (val<current.value){
+                current=current.leftChild;
+            }else if (val>current.value){
+                current=current.rightChild;
+            }else {
+                return current;
+            }
+        }
+        return null;
+    }
 
 }
