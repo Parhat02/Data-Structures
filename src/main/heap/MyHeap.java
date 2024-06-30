@@ -13,6 +13,13 @@ public class MyHeap {
         this.size=0;
     }
 
+    public MyHeap(int[] arr) {
+        this.items = new int[arr.length];
+        size=arr.length;
+        this.items=arr;
+        buildHeap();
+    }
+
     public void insert(int value){
         if (size==items.length) throw new NoSuchElementException();
         else {
@@ -41,7 +48,7 @@ public class MyHeap {
         if (size==0) throw new NoSuchElementException();
         else {
             int result = items[0];
-            items[0] = items[size--];
+            items[0] = items[--size];
             bubbleDown();
             return result;
         }
@@ -102,11 +109,30 @@ public class MyHeap {
     public boolean isValidParent(int index){
         if (!hasLeftChild(index)) return true;
         else {
-            boolean isValid = items[index] >= leftChildIndex(index);
+            boolean isValid = items[index] >= items[leftChildIndex(index)];
             if (hasRightChild(index)){
-                isValid = items[index] >= items[rightChildIndex(index)];
+                isValid = (items[index]>=items[leftChildIndex(index)] && items[index]>=items[rightChildIndex(index)]);
             }
             return isValid;
         }
     }
+
+    public void buildHeap(){
+        int startIndex = (size/2) - 1;
+        for (int i = startIndex; i >= 0; i--) {
+            heapify(i);
+        }
+    }
+
+    private void heapify(int index) {
+        // check if the index element is a valid parent
+        if (!isValidParent(index)){
+            int largestChildIndex=largerChildIndex(index);
+            swap(index, largestChildIndex);
+            heapify(largestChildIndex);
+        }
+
+    }
+
+
 }

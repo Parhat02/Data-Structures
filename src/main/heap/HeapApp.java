@@ -16,5 +16,10 @@ public class HeapApp {
         heap.printHeap();
         heap.remove();
         heap.printHeap();
+
+        System.out.println("==========Heapify==============");
+        int[] numbers = {1,2,13,5,35,6,8,21,0};
+        MyHeap heap1=new MyHeap(numbers);
+        heap1.printHeap();
     }
 }
