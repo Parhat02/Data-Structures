@@ -14,13 +14,14 @@ public class LRUCacheTestApp {
         System.out.println(lRUCache.get(3));;    // return 3
         System.out.println(lRUCache.get(4));;// return 4
         lRUCache.printLRUCache();
-       /* LRUCache1 cache=new LRUCache1(3);
+        LRUCache cache=new LRUCache(3);
         cache.put(1,1);
         cache.put(2,2);
         cache.put(3,3);
         cache.put(4,4);
         System.out.println(cache.get(1));
-        cache.printLRUCache();*/
+        System.out.println(cache.popTail().value);
+        cache.printLRUCache();
     }
 
 }
